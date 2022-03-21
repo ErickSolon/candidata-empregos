@@ -12,35 +12,24 @@ import javax.persistence.Table;
 public class CandidatosModel {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(nullable = false, length = 1000, name = "Id")
-	protected Long id;
+	@Column(length = 1000, name = "Id")
+	protected Long Id;
 
-	@Column(nullable = false, length = 1000, name = "IdEmpresas")
-	protected Long IdEmpresas;
-
-	@Column(nullable = true, length = 25, name = "NomeCompleto")
+	@Column(length = 25, name = "NomeCompleto")
 	protected String NomeCompleto;
 
-	@Column(nullable = true, length = 25, name = "Email")
+	@Column(length = 25, name = "Email")
 	protected String Email;
 	
-	@Column(nullable = true, length = 25, name = "Telefone")
+	@Column(length = 25, name = "Telefone")
 	protected String Telefone;
 
 	public Long getId() {
-		return id;
+		return Id;
 	}
 
 	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public Long getIdEmpresas() {
-		return IdEmpresas;
-	}
-
-	public void setIdEmpresas(Long idEmpresas) {
-		IdEmpresas = idEmpresas;
+		Id = id;
 	}
 
 	public String getNomeCompleto() {
@@ -66,6 +55,6 @@ public class CandidatosModel {
 	public void setTelefone(String telefone) {
 		Telefone = telefone;
 	}
-	
+
 	
 }

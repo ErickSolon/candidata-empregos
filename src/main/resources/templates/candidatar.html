@@ -33,7 +33,7 @@
     </nav>
 
     <div class="d-flex justify-content-center">
-        <form>
+        <form method="POST">
             <table class="table table-striped">
                 <thead>
                     <tr>
@@ -93,7 +93,7 @@
                                         </div>
                                         <div class="modal-body">
                                             <div class="d-flex justify-content-center">
-                                                <form>
+                                                <form method="POST">
                                                     <table class="table table-borderless">
                                                         <thead>
                                                             <tr>
@@ -104,20 +104,21 @@
                                                         </thead>
                                                         <tbody>
                                                             <tr>
-                                                                <th scope="row"><input type="text" name="nomeCompleto"></th>
-                                                                <th scope="row"><input type="text" name="telefone"></th>
-                                                                <th scope="row"><input type="text" name="email"></th>
+                                                                <th scope="row"><input type="text" name="nomeCompleto" required></th>
+                                                                <th scope="row"><input type="text" name="telefone" required></th>
+                                                                <th scope="row"><input type="text" name="email" required></th>
                                                                 <th scope="row">
                                                                     <div class="d-flex justify-content-end">
 	                                                                	<button class="btn btn-primary" type="submit">Candidatar-se</button>
                                                                     </div>
                                                                 </th>
                                                             </tr>
-                                                            
+															
                                                         </tbody>
                                                     </table>
                                                 </form>
                                             
+
                                             
                                             </div>
                                         </div>
@@ -134,7 +135,11 @@
             </table>
         </form>
     </div>
-
+    
+	// TODO: Adicinar na table
+	<div th:each="empresa: ${empresas}">
+	    <h1 th:text="${empresa.NomeEmpresa}"></h1>
+	</div>	
 
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
