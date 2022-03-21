@@ -11,7 +11,7 @@ import javax.persistence.Table;
 @Table(name = "Candidatos")
 public class CandidatosModel {
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(length = 1000, name = "Id")
 	protected Long Id;
 
@@ -23,6 +23,9 @@ public class CandidatosModel {
 	
 	@Column(length = 25, name = "Telefone")
 	protected String Telefone;
+	
+	@Column(length = 25, name = "EmpresaSelecionada")
+	protected String EmpresaSelecionada;
 
 	public Long getId() {
 		return Id;
