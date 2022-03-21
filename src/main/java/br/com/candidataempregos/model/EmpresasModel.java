@@ -5,6 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -12,42 +14,24 @@ import javax.persistence.Table;
 public class EmpresasModel {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(nullable = false, length = 1000, name = "id")
-	protected Long id;
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(length = 1000, name = "id")
+	protected Integer id;
 
-	@Column(nullable = false, length = 1000, name = "IdCandidatos")
-	protected Long IdCandidatos ;
-
-	@Column(nullable = true, length = 25, name = "NomeEmpresa")
+	@Column(length = 25, name = "NomeEmpresa")
 	protected String NomeEmpresa;
 
-	@Column(nullable = true, length = 25, name = "NomeVaga")
+	@Column(length = 25, name = "NomeVaga")
 	protected String NomeVaga;
 	
-	@Column(nullable = true, length = 100, name = "LocalizacaoEmpresa")
+	@Column(length = 100, name = "LocalizacaoEmpresa")
 	protected String LocalizacaoEmpresa;
 	
-	@Column(nullable = true, length = 100, name = "Descricao")
+	@Column(length = 100, name = "Descricao")
 	protected String Descricao;
-	
-	@Column(nullable = true, length = 1000, name = "QuantidadeCandidatos")
-	protected int QuantidadeCandidatos;
 
-	public Long getId() {
+	public Integer getId() {
 		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public Long getIdCandidatos() {
-		return IdCandidatos;
-	}
-
-	public void setIdCandidatos(Long idCandidatos) {
-		IdCandidatos = idCandidatos;
 	}
 
 	public String getNomeEmpresa() {
@@ -81,14 +65,4 @@ public class EmpresasModel {
 	public void setDescricao(String descricao) {
 		Descricao = descricao;
 	}
-
-	public int getQuantidadeCandidatos() {
-		return QuantidadeCandidatos;
-	}
-
-	public void setQuantidadeCandidatos(int quantidadeCandidatos) {
-		QuantidadeCandidatos = quantidadeCandidatos;
-	}
-
-	
 }

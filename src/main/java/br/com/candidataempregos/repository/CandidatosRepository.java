@@ -5,6 +5,7 @@ import org.springframework.stereotype.Repository;
 
 import br.com.candidataempregos.model.CandidatosModel;
 
+
 @Repository
 public interface CandidatosRepository extends JpaRepository<CandidatosModel, Long>  {
 

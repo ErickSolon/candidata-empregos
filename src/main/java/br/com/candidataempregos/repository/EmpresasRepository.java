@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import br.com.candidataempregos.model.EmpresasModel;
 
 @Repository
-public interface EmpresasRepository extends JpaRepository<EmpresasModel, Long> {
+public interface EmpresasRepository extends JpaRepository<EmpresasModel, Integer> {
 
 }
