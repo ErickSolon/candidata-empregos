@@ -13,8 +13,8 @@
 
 </head>
 
-<body>
-	<nav class="navbar navbar-expand navbar-light bg-faded">
+<body class="bg-dark">
+	<nav class="navbar navbar-expand navbar-light bg-faded bg-secondary">
 		<div class="container">
 			<a class="navbar-brand" href="/">Candidata Empregos</a>
 			<ul class="navbar-nav me-auto mt-2 mt-lg-0">
@@ -28,7 +28,7 @@
 		</div>
 	</nav>
 
-	<div>
+	<div class="bg-light">
 		<div class="d-flex justify-content-center">
 			<form method="POST">
 				<table class="table table-striped">
@@ -74,7 +74,7 @@
 												<div th:text="${empresa.Descricao}"></div>
 											</div>
 											<div class="modal-footer">
-												<button type="button" class="btn btn-secondary"
+												<button type="button" class="btn btn-danger"
 													data-bs-dismiss="modal">Fechar</button>
 											</div>
 										</div>
@@ -125,10 +125,7 @@
 																	</th>
 
 																	<th scope="row">
-																		<div class="d-flex justify-content-end">
-																			<button class="btn btn-primary"
-																				type="submit">Candidatar-se</button>
-																		</div>
+																		
 																	</th>
 																</tr>
 
@@ -137,7 +134,10 @@
 													</form>
 												</div>
 											</div>
+											
 											<div class="modal-footer">
+											<button class="btn btn-success"
+													type="submit" data-bs-dismiss="modal">Candidatar-se</button>
 												<button type="button" class="btn btn-secondary"
 													data-bs-dismiss="modal">Fechar</button>
 											</div>
