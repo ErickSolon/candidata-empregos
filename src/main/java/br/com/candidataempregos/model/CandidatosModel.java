@@ -59,5 +59,11 @@ public class CandidatosModel {
 		Telefone = telefone;
 	}
 
-	
+	public String getEmpresaSelecionada() {
+		return EmpresaSelecionada;
+	}
+
+	public void setEmpresaSelecionada(String empresaSelecionada) {
+		EmpresaSelecionada = empresaSelecionada;
+	}
 }

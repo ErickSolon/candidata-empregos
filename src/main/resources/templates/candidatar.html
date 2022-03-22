@@ -109,7 +109,6 @@
 																	<th scope="col">Seu Nome Completo:</th>
 																	<th scope="col">Seu Telefone</th>
 																	<th scope="col">Seu E-mail</th>
-																	<th scope="col">Empresa Selecionada</th>
 																</tr>
 															</thead>
 															<tbody>
@@ -120,9 +119,9 @@
 																			required></th>
 																	<th scope="row"><input type="text" name="email"
 																			required></th>
-																	<th scope="row"><input type="text"
-																			name="EmpresaSelecionada"
-																			th:value="${empresa.NomeEmpresa}" disabled>
+																	<th scope="row"><input type="hidden"
+																			th:attr="name='EmpresaSelecionada'"
+																			th:value="${empresa.NomeEmpresa}">
 																	</th>
 
 																	<th scope="row">
